@@ -38,7 +38,7 @@ footer {
 }
 
 footer {
-  background-color: bisque;
+  background-color: pink;
 }
 
 a {
@@ -223,7 +223,7 @@ nav ul li a {
 
 /* ================ WEEKLY-MENU =================== */
 
-.weekly-menu {
+.menu-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -232,8 +232,9 @@ nav ul li a {
 
 .weekly-menu h2 {
   font: 700 1.5rem "Playfair Display", sans-serif;
-  margin: 0.5em;
-  margin-right: auto;
+  margin: 0.5em auto;
+  width: 100%;
+  text-align: center;
 }
 
 .menu-card {
@@ -254,4 +255,75 @@ nav ul li a {
 .menu-card h4 {
   font-weight: 700;
   font-size: 1.2rem;
+}
+
+/* ================ CTA =================== */
+
+.cta {
+  background-color: var(--pastel-pink);
+  padding-bottom: 1em;
+}
+
+.cta img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cta > * {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+
+.cta-msg h2 {
+  font: 700 1.5rem "Playfair Display", sans-serif;
+  margin: 1em auto 0.5em auto;
+}
+
+.cta-msg p {
+  font: 300 1.2rem "Lato", sans-serif;
+}
+
+.cta-msg a{
+  display: block;
+  width: fit-content;
+  margin: 2em auto;
+  padding: 0.4em 2em;
+  border: 1px solid black;
+}
+
+/* ================ NEWSLETTER =================== */
+
+.newsletter {
+  margin: 1em auto;
+}
+
+.newsletter form  {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter label {
+  display: block;
+  margin: 1em auto;
+  padding: 1em;
+  font: 700 1.2rem "Playfair Display", sans-serif;
+}
+
+.newsletter input {
+  display: block;
+  padding: 0.5em;
+  width: 20em;
+  border: 1px solid black;
+}
+
+.newsletter button {
+  padding: 0.5em 1em;
+  margin: 1em;
+  border: 1px solid black;
+  background-color: var(--pastel-green);
 }
