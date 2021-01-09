@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700;800&display=swap");
 
 :root {
   --pastel-green: #99ddcc;
@@ -6,6 +6,8 @@
   --footer-height: 100px;
   --menu-height: 500px;
   --header-height: 110px;
+  --mb-card-w: 160px;
+  --mb-card-h: 220px;
 }
 
 * {
@@ -119,18 +121,20 @@ nav.open {
   top: var(--header-height);
 }
 
-@keyframes slideDown{
+@keyframes slideDown {
   from {
     top: calc(var(--menu-height) * -1);
-  } to {
+  }
+  to {
     top: var(--header-height);
   }
 }
 
-@keyframes slideUp{
+@keyframes slideUp {
   from {
     top: var(--header-height);
-  } to {
+  }
+  to {
     top: calc(var(--menu-height) * -1);
   }
 }
@@ -206,7 +210,7 @@ nav ul li a {
   margin: auto;
 }
 
-.describe-card h3{
+.describe-card h3 {
   width: 70%;
   margin: 0.5em auto;
   font: 700 1.2rem "Playfair Display", sans-serif;
@@ -215,4 +219,39 @@ nav ul li a {
 .describe-card h3,
 .describe-card p {
   text-align: center;
+}
+
+/* ================ WEEKLY-MENU =================== */
+
+.weekly-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weekly-menu h2 {
+  font: 700 1.5rem "Playfair Display", sans-serif;
+  margin: 0.5em;
+  margin-right: auto;
+}
+
+.menu-card {
+  margin: 10px 12px;
+}
+
+.menu-card > * {
+  max-width: var(--mb-card-w);
+  margin-bottom: 0.2em;
+}
+
+.menu-card img {
+  height: var(--mb-card-h);
+  object-fit: cover;
+  margin-bottom: 0.8em;
+}
+
+.menu-card h4 {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
