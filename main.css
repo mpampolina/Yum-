@@ -5,7 +5,7 @@
   --pastel-pink: #ffe2e2;
   --footer-height: 100px;
   --menu-height: 500px;
-  --header-height: 110px;
+  --header-height: 90px;
   --mb-card-w: 160px;
   --mb-card-h: 220px;
 }
@@ -38,7 +38,7 @@ footer {
 }
 
 footer {
-  background-color: pink;
+  background-color: white;
 }
 
 a {
@@ -61,6 +61,7 @@ button:focus {
 
 .logo {
   color: var(--pastel-green);
+  display: block;
 }
 
 .container {
@@ -83,6 +84,7 @@ header a.logo {
 }
 
 #site-top {
+  height: var(--header-height);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -95,8 +97,12 @@ header a.logo {
   position: fixed;
 }
 
-#site-top > * {
-  margin: 25px 10px 20px 10px;
+#site-top > .logo {
+  margin: 0.3em 0.4em 0.1em 0.4em;
+}
+
+#site-top > #hamburger {
+  margin: 0.3em 1.5em 0.1em 0.4em;
 }
 
 .no-anim {
@@ -285,7 +291,7 @@ nav ul li a {
   font: 300 1.2rem "Lato", sans-serif;
 }
 
-.cta-msg a{
+.cta-msg a {
   display: block;
   width: fit-content;
   margin: 2em auto;
@@ -296,10 +302,10 @@ nav ul li a {
 /* ================ NEWSLETTER =================== */
 
 .newsletter {
-  margin: 1em auto;
+  margin: 0 auto 4em auto;
 }
 
-.newsletter form  {
+.newsletter form {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -326,4 +332,65 @@ nav ul li a {
   margin: 1em;
   border: 1px solid black;
   background-color: var(--pastel-green);
+}
+
+/* ================ FOOTER =================== */
+
+.site-footer {
+  border-top: 1px solid black;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-footer .logo {
+  font: 700 2rem "Playfair Display", sans-serif;
+}
+
+.footer-left {
+  margin: 0.5em auto;
+}
+
+.footer-right {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.footer-right > * {
+  margin: 0.8em auto;
+}
+
+.site-footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-footer li {
+  margin: 0.2em auto;
+}
+
+.social {
+  display: inline-block;
+  text-align: center;
+}
+
+.social > * {
+  margin: 0 0.2em;
+}
+
+.contact,
+.contact-2 {
+  text-align: center;
+}
+
+.contact-2,
+.contact-2 p a {
+  color: grey;
+}
+
+.contact > *,
+.contact-2 > * {
+  margin-bottom: 0.3em;
 }
