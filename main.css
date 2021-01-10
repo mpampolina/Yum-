@@ -8,6 +8,7 @@
   --header-height: 90px;
   --mb-card-w: 160px;
   --mb-card-h: 220px;
+  --max-width: 1100px;
 }
 
 * {
@@ -20,6 +21,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 .content-wrap {
@@ -88,6 +90,7 @@ header a.logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
   background-color: white;
   position: relative;
   z-index: 3;
@@ -153,6 +156,10 @@ nav ul li {
 
 nav ul li a {
   font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: grey;
 }
 
 .sign-log {
@@ -238,8 +245,10 @@ nav ul li a {
 
 .weekly-menu h2 {
   font: 700 1.5rem "Playfair Display", sans-serif;
+  border-bottom: 2px dashed var(--pastel-green);
+  padding-bottom: 4px;
   margin: 0.5em auto;
-  width: 100%;
+  width: fit-content;
   text-align: center;
 }
 
@@ -266,11 +275,15 @@ nav ul li a {
 /* ================ CTA =================== */
 
 .cta {
-  background-color: var(--pastel-pink);
+  height: 100%;
+  margin-top: 2em;
   padding-bottom: 1em;
+  background-color: var(--pastel-pink);
 }
 
 .cta img {
+  display: block;
+  position: relative;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -279,6 +292,9 @@ nav ul li a {
 .cta > * {
   text-align: center;
   width: 70%;
+}
+
+.cta-msg {
   margin: auto;
 }
 
@@ -371,6 +387,10 @@ nav ul li a {
   margin: 0.2em auto;
 }
 
+.site-footer li a:hover {
+  color: grey;
+}
+
 .social {
   display: inline-block;
   text-align: center;
@@ -380,7 +400,6 @@ nav ul li a {
   margin: 0 0.2em;
 }
 
-.contact,
 .contact-2 {
   text-align: center;
 }
@@ -390,7 +409,174 @@ nav ul li a {
   color: grey;
 }
 
-.contact > *,
 .contact-2 > * {
   margin-bottom: 0.3em;
+}
+
+/* ================ BREAKPOINTS =================== */
+
+@media (min-width: 600px) {
+  #site-top {
+    padding: 0 2em;
+  }
+
+  .hero-bg {
+    justify-content: flex-start;
+  }
+
+  .hero-msg {
+    width: 50%;
+  }
+
+  .site-footer {
+    flex-direction: row;
+    margin: 0 15%;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    margin-left: 10%;
+  }
+
+  .footer-right {
+    margin-right: 10%;
+  }
+
+  .site-footer ul li {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .hero-msg {
+    width: 35%;
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  .cta img {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    max-width: var(--max-width);
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  header nav#menu {
+    width: fit-content;
+    height: var(--header-height);
+    animation: none;
+    top: 0;
+    right: 0;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    padding-bottom: 0;
+  }
+
+  #menu ul > :last-child {
+    margin-right: 2.5em;
+  }
+
+  #site-top {
+    width: fit-content;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+
+  nav ul li {
+    padding-bottom: 0;
+    margin: 0 1em;
+    border-bottom: none;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .sign-log {
+    flex-direction: row;
+  }
+
+  .sign-log > * {
+    margin-right: 1em;
+    width: fit-content;
+    padding: 0.5em 1.5em;
+  }
+
+  .describe {
+    display: grid;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 2em auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .describe-card {
+    width: 60%;
+    margin: 1em auto;
+  }
+
+  .cta {
+    max-width: var(--max-width);
+    margin: 3em auto 1em auto;
+  }
+
+  .footer-right ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer-right ul > * {
+    margin: 1em 0.5em;
+  }
+
+  .footer-right ul,
+  .footer-right .social {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .social {
+    margin-right: 0;
+  }
+
+  .contact-2 {
+    margin: 1em auto;
+  }
+}
+
+@media (min-width: 1150px) {
+  .hero-bg {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero-msg {
+    width: 100%;
+    margin: 0;
+    grid-column: 3 / 6;
+    padding: 1em;
+  }
 }
