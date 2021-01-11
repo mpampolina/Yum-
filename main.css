@@ -331,6 +331,7 @@ nav ul li a:hover {
 
 .newsletter label {
   display: block;
+  text-align: center;
   margin: 1em auto;
   padding: 1em;
   font: 700 1.2rem "Playfair Display", sans-serif;
@@ -344,8 +345,10 @@ nav ul li a:hover {
 }
 
 .newsletter button {
+  display: block;
+  margin: 1em auto;
+  width: fit-content;
   padding: 0.5em 1em;
-  margin: 1em;
   border: 1px solid black;
   background-color: var(--pastel-green);
 }
@@ -469,6 +472,15 @@ nav ul li a:hover {
     flex-direction: row;
     padding-bottom: 0;
     margin-bottom: 1em;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    display: inline-block;
+  }
+
+  .newsletter button {
+    margin-left: 0.1em;
   }
 
   .cta img {
